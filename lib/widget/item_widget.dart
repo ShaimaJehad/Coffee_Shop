@@ -9,16 +9,16 @@ class ItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,
-      physics: const NeverScrollableScrollPhysics(),
+      physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       childAspectRatio: (200 / 280),
       children: [
         for (int i = 0; i < img.length; i++)
           Container(
-            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-            margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 13),
+            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            margin: EdgeInsets.symmetric(vertical: 8, horizontal: 13),
             decoration:
-                const BoxDecoration(color: Color(0xFF212325), boxShadow: [
+                BoxDecoration(color: Color(0xFF212325), boxShadow: [
               BoxShadow(
                 color: Color.fromRGBO(50, 50, 50, 0.9),
                 spreadRadius: 1,
@@ -53,13 +53,13 @@ class ItemWidget extends StatelessWidget {
                       children: [
                         Text(
                           img[i],
-                          style: const TextStyle(
+                          style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
-                        const SizedBox(height: 8),
-                        const Text(
+                         SizedBox(height: 8),
+                           Text(
                           'Best Coffee',
                           style: TextStyle(
                             fontSize: 16,
@@ -89,7 +89,7 @@ class ItemWidget extends StatelessWidget {
                           color: Color(0xFFE57734),
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        child: const Icon(
+                        child: Icon(
                           CupertinoIcons.add,
                           size: 20,
                           color: Colors.white,
